@@ -1,3 +1,5 @@
+from string import ascii_letters as letters
+
 rucksacks = []
 total = 0
 
@@ -9,9 +11,6 @@ with open('input.txt') as f:
 
 for rucksack in rucksacks:
     c = ''.join(rucksack[0].intersection(rucksack[1]))
-    if c.isupper():
-        total += ord(c) - 38
-        continue
-    total += ord(c) - 96
+    total += letters.index(c) + 1
 
 print(total)
