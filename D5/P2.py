@@ -2,7 +2,6 @@ with open('input.txt') as f:
     data = f.read().splitlines()
 
 stacks = {i : [] for i in range(1,10)}
-steps = []
 
 for i in range(7,-1,-1):
     for j in range(1,10):
