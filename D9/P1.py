@@ -6,7 +6,7 @@ tailPos.add((tail[0], tail[1]))
 def moveTail():
     dx = head[0] - tail[0]
     dy = head[1] - tail[1]
-    if -1 <= dx <= 1 and -1 <= dy <= 1:
+    if abs(dx) <= 1 and abs(dy) <= 1:
         return
     tail[1] += dy//abs(dy) if dy != 0 else 0
     tail[0] += dx//abs(dx) if dx != 0 else 0

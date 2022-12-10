@@ -25,7 +25,7 @@ class Knot():
         if self.parent != None:
             dx = self.parent.pos[0] - self.pos[0]
             dy = self.parent.pos[1] - self.pos[1]
-            if not (-1 <= dx <= 1 and -1 <= dy <= 1):
+            if not (abs(dx) <= 1 and abs(dy) <= 1):
                 self.pos[1] += dy//abs(dy) if dy != 0 else 0
                 self.pos[0] += dx//abs(dx) if dx != 0 else 0
         if self.child != None:
