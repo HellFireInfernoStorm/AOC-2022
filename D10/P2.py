@@ -17,9 +17,10 @@ screen = [[' ' for j in range(40)] for i in range(6)]
 for i in range(40*6):
     if not (-1 <= (i%40 - history[i]) <= 1):
         continue
-    screen[i//40][i%40] = '#'
+    screen[i//40][i%40] = '█'
 
 for i in range(6):
     for j in range(40):
+        print(screen[i][j], end='')
         print(screen[i][j], end='')
     print('')
